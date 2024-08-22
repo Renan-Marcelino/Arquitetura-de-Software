@@ -12,6 +12,21 @@ public class Cartas {
 
     private int hp;
 
+    private int atk;
+
+    public Cartas(int hp, int atk) {
+        this.hp = hp;
+        this.atk = atk;
+    }
+
+    public int getAtk() {
+        return atk;
+    }
+
+    public void setAtk(int atk) {
+        this.atk = atk;
+    }
+
     public Cartas(int hp) {
         this.hp = hp;
     }
