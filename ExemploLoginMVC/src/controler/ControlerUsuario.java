@@ -5,6 +5,7 @@
 package controler;
 
 import model.*;
+import views.*;
 
 /**
  *
@@ -13,13 +14,17 @@ import model.*;
 public class ControlerUsuario {
 
     private FcUsuarios fcusuario;
-    private ViewUsuario viewusuario;
+    private Login viewusuario;
 
-    public ControlerUsuario(FcUsuarios fcusuario, ViewUsuario viewusuario) {
+    public ControlerUsuario(FcUsuarios fcusuario, Login viewusuario) {
         this.fcusuario = fcusuario;
         this.viewusuario = viewusuario;
     }
 
+    public Usuario login(){
+        return viewusuario.login();
+    }
+    
     public boolean validaSenha(Usuario user){
         return FcUsuarios.validaUsuario(user);
     }
